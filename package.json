@@ -2,9 +2,11 @@
   "name": "nodejs-discord-bot-friends",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.cjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commands-sync": "node deploy-commands.cjs",
+    "friend": "npm run commands-sync && node index.cjs"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +14,7 @@
   "type": "commonjs",
   "dependencies": {
     "@discordjs/voice": "^0.19.0",
+    "@snazzah/davey": "^0.1.9",
     "discord.js": "^14.25.1",
     "dotenv": "^17.2.3"
   }
